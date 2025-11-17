@@ -1,0 +1,50 @@
+public class BreaknConles {
+    public static void main(String[] args) {
+        System.out.println("==================================================================================================================");
+        System.out.println("                                                 JAVA BREAK AND CONTINUE");
+        System.out.println("==================================================================================================================");
+        System.out.println(" ");
+        System.out.println("Break");
+        System.out.println(" ");
+        System.out.println("- You have already seen the break statement used in an earlier chapter of this tutorial.");
+        System.out.println("  It was used to \\\"jump out\\\" of a switch statement.");
+        System.out.println(" ");
+        System.out.println("- The break statement can also be used to jump out of a loop.");
+        System.out.println(" ");
+        System.out.println("This example stops the loop when i is equal to 4:");
+        System.out.println(" ");
+        System.out.println("Example:");
+        System.out.println(" ");
+        System.out.println("for (int i = 0; i < 10; i++) {");
+        System.out.println("    if (i == 4) {");
+        System.out.println("    break;");
+        System.out.println("  }");
+        System.out.println("  System.out.println(i);");
+        System.out.println("}");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("Continue");
+        System.out.println(" ");
+        System.out.println("- The continue statement breaks one iteration (in the loop), if a specified condition occurs,");
+        System.out.println("  and continues with the next iteration in the loop.");
+        System.out.println(" ");
+        System.out.println("This example skips the value of 4:");
+        System.out.println(" ");
+        System.out.println("Example: ");
+        System.out.println(" ");
+        System.out.println("for (int i = 0; i < 10; i++) {");
+        System.out.println("    if (i == 4) {");
+        System.out.println("        continue; ");
+        System.out.println("      }");
+        System.out.println("      System.out.println(i);");
+        System.out.println("}");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("Good to Remember:");
+        System.out.println(" ");
+        System.out.println("· break = stop the loop completely.");
+        System.out.println("· continue = skip this round, but keep looping.");
+        System.out.println(" ");
+        System.out.println(" ");
+    }
+}
