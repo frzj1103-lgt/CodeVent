@@ -1,341 +1,287 @@
-public class Datatles {
-    public static void main(String[] args) {
+package lessons;
+import java.util.Scanner;
 
-        System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA DATA TYPES");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("As explained in the previous chapter, a variable in Java must be a specified data type:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("int myNum = 5;               // Integer (whole number)");
-        System.out.println("float myFloatNum = 5.99f;    // Floating point number");
-        System.out.println("char myLetter = 'D';         // Character");
-        System.out.println("boolean myBool = true;       // Boolean");
-        System.out.println("String myText = \"Hello\";     // String");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Data types are divided into two groups:");
-        System.out.println("");
-        System.out.println("Primitive data types - includes byte, short, int, long, float, double, boolean and char");
-        System.out.println("Non-primitive data types - such as String, Arrays and Classes (you will learn more about these in a later chapter)");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Primitive Data Types");
-        System.out.println("");
-        System.out.println("A primitive data type specifies the type of a variable and the kind of values it can hold.");
-        System.out.println("");
-        System.out.println("There are eight primitive data types in Java:");
-        System.out.println("");
-        System.out.println("Data Type\tDescription");
-        System.out.println("byte\tStores whole numbers from -128 to 127");
-        System.out.println("short\tStores whole numbers from -32,768 to 32,767");
-        System.out.println("int\tStores whole numbers from -2,147,483,648 to 2,147,483,647");
-        System.out.println("long\tStores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807");
-        System.out.println("float\tStores fractional numbers. Sufficient for storing 6 to 7 decimal digits");
-        System.out.println("double\tStores fractional numbers. Sufficient for storing 15 to 16 decimal digits");
-        System.out.println("boolean\tStores true or false values");
-        System.out.println("char\tStores a single character/letter or ASCII values");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("You Cannot Change the Type");
-        System.out.println("");
-        System.out.println("Once a variable is declared with a type, it cannot change to another type later in the program:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("int myNum = 5;       // myNum is an int");
-        System.out.println("// myNum = \"Hello\";  // Error: cannot assign a String to an int");
-        System.out.println("");
-        System.out.println("String myText = \"Hi\"; // myText is a String");
-        System.out.println("// myText = 123;      // Error: cannot assign a number to a String");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Note: This rule makes Java safer, because the compiler will stop you if you try to mix up types by mistake.");
-        System.out.println("");
-        System.out.println("If you really need to change between types,");
-        System.out.println(" you must use type casting or conversion methods (for example, turning an int into a double).");
-        System.out.println("");
-        System.out.println("");
-         System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA NUMBERS");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("Numbers");
-        System.out.println("");
-        System.out.println("Primitive number types are divided into two groups:");
-        System.out.println("");
-        System.out.println("Integer types stores whole numbers, positive or negative (such as 123 or -456), ");
-        System.out.println("without decimals. Valid types are byte, short, int and long. Which type you should use, depends on the numeric value.");
-        System.out.println("");
-        System.out.println("Floating point types represents numbers with a fractional part,");
-        System.out.println("containing one or more decimals. There are two types: float and double.");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Even though there are many numeric types in Java, ");
-        System.out.println("the most used for numbers are int (for whole numbers) and double (for floating point numbers). ");
-        System.out.println("However, we will describe them all as you continue to read.");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Integer Types");
-        System.out.println("");
-        System.out.println("Byte");
-        System.out.println("");
-        System.out.println("The byte data type can store whole numbers from -128 to 127. ");
-        System.out.println("This can be used instead of int or other integer types to save memory when ");
-        System.out.println("you are certain that the value will be within -128 and 127:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("byte myNum = 100;");
-        System.out.println("System.out.println(myNum);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Short");
-        System.out.println("");
-        System.out.println("The short data type can store whole numbers from -32768 to 32767:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("short myNum = 5000;");
-        System.out.println("System.out.println(myNum);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Int");
-        System.out.println("");
-        System.out.println("The int data type can store whole numbers from -2147483648 to 2147483647. In general, ");
-        System.out.println("and in our tutorial, the int data type is the preferred data type when we create variables with a numeric value.");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("int myNum = 100000;");
-        System.out.println("System.out.println(myNum);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Long");
-        System.out.println("");
-        System.out.println("The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807.");
-        System.out.println("This is used when int is not large enough to store the value. Note that you should end the value with an \"L\":");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("long myNum = 15000000000L;");
-        System.out.println("System.out.println(myNum);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Floating Point Types");
-        System.out.println("");
-        System.out.println("You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14515.");
-        System.out.println("");
-        System.out.println("The float and double data types can store fractional numbers.");
-        System.out.println("Note that you should end the value with an \"f\" for floats and \"d\" for doubles:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Float Example");
-        System.out.println("");
-        System.out.println("float myNum = 5.75f;");
-        System.out.println("System.out.println(myNum);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Double Example");
-        System.out.println("");
-        System.out.println("double myNum = 19.99d;");
-        System.out.println("System.out.println(myNum);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Use float or double?");
-        System.out.println("");
-        System.out.println("The precision of a floating point value indicates how many digits the value can have after the decimal point.");
-        System.out.println("The precision of float is only 6-7 decimal digits,");
-        System.out.println("while double variables have a precision of about 16 digits.");
-        System.out.println("");
-        System.out.println("Therefore it is safer to use double for most calculations.");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Scientific Numbers");
-        System.out.println("");
-        System.out.println("A floating point number can also be a scientific number with an \"e\" to indicate the power of 10:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("float f1 = 35e3f;");
-        System.out.println("double d1 = 12E4d;");
-        System.out.println("System.out.println(f1);");
-        System.out.println("System.out.println(d1);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA BOOLEANS");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("Very often in programming, you will need a data type that can only have one of two values, like:");
-        System.out.println("");
-        System.out.println("YES / NO");
-        System.out.println("ON / OFF");
-        System.out.println("TRUE / FALSE");
-        System.out.println("");
-        System.out.println("For this, Java has a boolean data type, which can only take the values true or false:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("boolean isJavaFun = true;");
-        System.out.println("boolean isFishTasty = false;");
-        System.out.println("System.out.println(isJavaFun);     // Outputs true");
-        System.out.println("System.out.println(isFishTasty);   // Outputs false");
-         System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA CHARACTERS");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("char myGrade = 'B';");
-        System.out.println("System.out.println(myGrade);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Alternatively, if you are familiar with ASCII values, you can use those to display certain characters:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("char myVar1 = 65, myVar2 = 66, myVar3 = 67;");
-        System.out.println("System.out.println(myVar1); ");
-        System.out.println("System.out.println(myVar2);");
-        System.out.println("System.out.println(myVar3);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Strings");
-        System.out.println("");
-        System.out.println("The String data type is used to store a sequence of characters (text). String values must be surrounded by double quotes:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String greeting = \"Hello World\";");
-        System.out.println("System.out.println(greeting);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA DATA TYPES EXAMPLE");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("Here's a real-life example of using different data types, to calculate and output the total cost of a number of items:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("// Create variables of different data types");
-        System.out.println("int items = 50;");
-        System.out.println("float costPerItem = 9.99f;  ");
-        System.out.println("float totalCost = items * costPerItem;");
-        System.out.println("char currency = '$';");
-        System.out.println("");
-        System.out.println("// Print variables");
-        System.out.println("System.out.println(\"Number of items: \" + items);");
-        System.out.println("System.out.println(\"Cost per item: \" + costPerItem + currency);");
-        System.out.println("System.out.println(\"Total cost = \" + totalCost + currency);");
-        System.out.println("");
-        System.out.println("");
-         System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA NON PRIMATIVE DATA TYPES");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("Non-primitive data types are called reference types because they refer to objects.");
-        System.out.println("");
-        System.out.println("The main differences between primitive and non-primitive data types are:");
-        System.out.println("");
-        System.out.println("Primitive types in Java are predefined and built into the language, ");
-        System.out.println("while non-primitive types are created by the programmer (except for String).");
-        System.out.println("");
-        System.out.println("Non-primitive types can be used to call methods to perform certain operations, whereas primitive types cannot.");
-        System.out.println("");
-        System.out.println("Primitive types start with a lowercase letter (like int), ");
-        System.out.println("while non-primitive types typically starts with an uppercase letter (like String).");
-        System.out.println("");
-        System.out.println("Primitive types always hold a value, whereas non-primitive types can be null.");
-        System.out.println("");
-        System.out.println("");
-          System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA var");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("The var Keyword");
-        System.out.println("");
-        System.out.println("The var keyword was introduced in Java 10 (released in 2018).");
-        System.out.println("The var keyword lets the compiler automatically detect the type of a variable based on the value you assign to it.");
-        System.out.println("");
-        System.out.println("This helps you write cleaner code and avoid repeating types, especially for long or complex types.");
-        System.out.println("");
-        System.out.println("For example, instead of writing int x = 5;, you can write:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("var x = 5;  // x is an int");
-        System.out.println("System.out.println(x);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("When using var, the compiler understands that 5 is an int.");
-        System.out.println("");
-        System.out.println("Example with Different Types");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Here are some examples showing how var can be used to create variables of different types, based on the values you assign:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("var myNum = 5;         // int");
-        System.out.println("var myDouble = 9.98;   // double");
-        System.out.println("var myChar = 'D';      // char");
-        System.out.println("var myBoolean = true;  // boolean");
-        System.out.println("var myString = \"Hello\"; // String");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Important Notes");
-        System.out.println("");
-        System.out.println("1. var only works when you assign a value at the same time (you can't declare var x; without assigning a value):");
-        System.out.println("");
-        System.out.println("var x; // Error");
-        System.out.println("var x = 5;  // OK");
-        System.out.println("");
-        System.out.println("2. Once the type is chosen, it stays the same. See example below:");
-        System.out.println("");
-        System.out.println("var x = 5;  // x is now an int");
-        System.out.println("x = 10;     // OK - still an int");
-        System.out.println("x = 9.99;   // Error - can't assign a double to an int");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("When to Use var");
-        System.out.println("");
-        System.out.println("For simple variables, it's usually clearer to write the type directly (int, double, char, etc.).");
-        System.out.println("");
-        System.out.println("But for more complex types, such as ArrayList or HashMap, var can make the code shorter and easier to read:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("// Without var");
-        System.out.println("ArrayList<String> cars = new ArrayList<String>();");
-        System.out.println("");
-        System.out.println("// With var");
-        System.out.println("var cars = new ArrayList<String>();");
-        System.out.println("");
-        System.out.println("");
-       
-        
+public class Datatles {
+    private static final String RESET = "\u001B[0m";
+    private static final String RED = "\u001B[31m";
+    private static final String GREEN = "\u001B[32m";
+    private static final String YELLOW = "\u001B[33m";
+    private static final String BLUE = "\u001B[34m";
+    private static final String CYAN = "\u001B[36m";
+    private static final String PURPLE = "\u001B[35m";
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        displayPaginatedLesson(scanner);
+        scanner.close();
     }
     
+    private static void displayPaginatedLesson(Scanner scanner) {
+        String[] pages = {
+            // Page 1: Introduction
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                  JAVA DATA TYPES - INTRODUCTION" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🌟 What are Data Types?" + RESET + "\n" +
+            "• Define what kind of data a variable can hold\n" +
+            "• Ensure type safety in Java\n" +
+            "• Help compiler allocate proper memory\n\n" +
+            YELLOW + "💡 Example Variables:" + RESET + "\n" +
+            BLUE + "int myNum = 5;           // Integer\n" +
+            "float myFloat = 5.99f;      // Floating point\n" +
+            "char myLetter = 'D';        // Character\n" +
+            "boolean myBool = true;      // Boolean\n" +
+            "String myText = \"Hello\";    // String" + RESET + "\n\n" +
+            GREEN + "🎯 Two Main Categories:" + RESET + "\n" +
+            "• " + BLUE + "Primitive" + RESET + " - Basic built-in types\n" +
+            "• " + BLUE + "Non-primitive" + RESET + " - Object references",
+            
+            // Page 2: Primitive Types Overview
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                   PRIMITIVE DATA TYPES" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "📊 8 Primitive Types in Java:" + RESET + "\n\n" +
+            YELLOW + "Integer Types:" + RESET + "\n" +
+            "byte    -128 to 127\n" +
+            "short   -32,768 to 32,767\n" +
+            "int     -2.1B to 2.1B\n" +
+            "long    -9.2Q to 9.2Q\n\n" +
+            YELLOW + "Decimal Types:" + RESET + "\n" +
+            "float   6-7 decimal digits\n" +
+            "double  15-16 decimal digits\n\n" +
+            YELLOW + "Other Types:" + RESET + "\n" +
+            "boolean true or false\n" +
+            "char    single character",
+            
+            // Page 3: Type Safety
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                    TYPE SAFETY IN JAVA" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🔒 Once Declared, Cannot Change:" + RESET + "\n" +
+            "Java is strongly typed - types are fixed!\n\n" +
+            YELLOW + "Valid:" + RESET + "\n" +
+            BLUE + "int myNum = 5;        // myNum is int\n" +
+            "String myText = \"Hi\";   // myText is String" + RESET + "\n\n" +
+            RED + "❌ Invalid:" + RESET + "\n" +
+            BLUE + "// myNum = \"Hello\";   // Error!\n" +
+            "// myText = 123;        // Error!" + RESET + "\n\n" +
+            GREEN + "🎯 Why This Matters:" + RESET + "\n" +
+            "• Prevents accidental type mixing\n" +
+            "• Makes code more reliable\n" +
+            "• Catches errors at compile time",
+            
+            // Page 4: Integer Types
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                      INTEGER TYPES" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🔢 Whole Numbers Only:" + RESET + "\n" +
+            "No decimals, positive or negative\n\n" +
+            YELLOW + "byte - Smallest (Saves Memory):" + RESET + "\n" +
+            BLUE + "byte myNum = 100;           // -128 to 127\n" +
+            "System.out.println(myNum);" + RESET + "\n\n" +
+            YELLOW + "short - Medium Range:" + RESET + "\n" +
+            BLUE + "short myNum = 5000;         // -32768 to 32767\n" +
+            "System.out.println(myNum);" + RESET + "\n\n" +
+            YELLOW + "int - Most Common:" + RESET + "\n" +
+            BLUE + "int myNum = 100000;         // -2.1B to 2.1B\n" +
+            "System.out.println(myNum);" + RESET + "\n\n" +
+            YELLOW + "long - Very Large:" + RESET + "\n" +
+            BLUE + "long myNum = 15000000000L;  // Note the 'L'\n" +
+            "System.out.println(myNum);" + RESET,
+            
+            // Page 5: Floating Point Types
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                   FLOATING POINT TYPES" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🔢 Numbers with Decimals:" + RESET + "\n" +
+            "Use when you need fractional parts\n\n" +
+            YELLOW + "float - Single Precision:" + RESET + "\n" +
+            BLUE + "float myNum = 5.75f;        // Note the 'f'\n" +
+            "System.out.println(myNum);" + RESET + "\n\n" +
+            YELLOW + "double - Double Precision:" + RESET + "\n" +
+            BLUE + "double myNum = 19.99d;      // 'd' is optional\n" +
+            "System.out.println(myNum);" + RESET + "\n\n" +
+            GREEN + "🎯 Precision Comparison:" + RESET + "\n" +
+            "float:  6-7 decimal digits\n" +
+            "double: 15-16 decimal digits\n\n" +
+            YELLOW + "💡 Recommendation:" + RESET + "\n" +
+            "Use " + BLUE + "double" + RESET + " for most calculations - it's more precise!",
+            
+            // Page 6: Scientific Numbers & Boolean
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "             SCIENTIFIC NUMBERS & BOOLEANS" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🔬 Scientific Notation:" + RESET + "\n" +
+            "Use 'e' for power of 10\n\n" +
+            BLUE + "float f1 = 35e3f;     // 35 × 10³ = 35000\n" +
+            "double d1 = 12E4d;    // 12 × 10⁴ = 120000\n" +
+            "System.out.println(f1);\n" +
+            "System.out.println(d1);" + RESET + "\n\n" +
+            GREEN + "🎯 Boolean - True/False:" + RESET + "\n" +
+            "Only two possible values\n\n" +
+            BLUE + "boolean isJavaFun = true;\n" +
+            "boolean isFishTasty = false;\n" +
+            "System.out.println(isJavaFun);    // true\n" +
+            "System.out.println(isFishTasty);  // false" + RESET + "\n\n" +
+            YELLOW + "💡 Real-world uses:" + RESET + "\n" +
+            "• YES/NO questions\n" +
+            "• ON/OFF switches\n" +
+            "• TRUE/FALSE conditions",
+            
+            // Page 7: Characters & Strings
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                   CHARACTERS & STRINGS" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🔤 char - Single Character:" + RESET + "\n" +
+            "Surround with single quotes '\n\n" +
+            BLUE + "char myGrade = 'B';\n" +
+            "System.out.println(myGrade);" + RESET + "\n\n" +
+            YELLOW + "Using ASCII Values:" + RESET + "\n" +
+            BLUE + "char myVar1 = 65;  // 'A'\n" +
+            "char myVar2 = 66;  // 'B'\n" +
+            "char myVar3 = 67;  // 'C'\n" +
+            "System.out.println(myVar1);\n" +
+            "System.out.println(myVar2);\n" +
+            "System.out.println(myVar3);" + RESET + "\n\n" +
+            GREEN + "📝 String - Text Sequence:" + RESET + "\n" +
+            "Surround with double quotes \"\n\n" +
+            BLUE + "String greeting = \"Hello World\";\n" +
+            "System.out.println(greeting);" + RESET,
+            
+            // Page 8: Practical Example
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                    PRACTICAL EXAMPLE" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🛒 Shopping Cart Calculation:" + RESET + "\n" +
+            BLUE + "// Create variables of different data types\n" +
+            "int items = 50;\n" +
+            "float costPerItem = 9.99f;\n" +
+            "float totalCost = items * costPerItem;\n" +
+            "char currency = '$';\n\n" +
+            "// Print variables\n" +
+            "System.out.println(\"Number of items: \" + items);\n" +
+            "System.out.println(\"Cost per item: \" + costPerItem + currency);\n" +
+            "System.out.println(\"Total cost = \" + totalCost + currency);" + RESET + "\n\n" +
+            YELLOW + "🚀 Output:" + RESET + "\n" +
+            "Number of items: 50\n" +
+            "Cost per item: 9.99$\n" +
+            "Total cost = 499.5$",
+            
+            // Page 9: Non-primitive Types
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                  NON-PRIMITIVE TYPES" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🎯 Reference Types:" + RESET + "\n" +
+            "Refer to objects rather than store values directly\n\n" +
+            YELLOW + "Key Differences:" + RESET + "\n" +
+            "• Created by programmer (except String)\n" +
+            "• Can call methods\n" +
+            "• Start with uppercase (String, Array, etc.)\n" +
+            "• Can be null\n\n" +
+            GREEN + "📊 Primitive vs Non-primitive:" + RESET + "\n" +
+            BLUE + "int x = 5;           // primitive\n" +
+            "String name = \"John\";   // non-primitive\n" +
+            "int[] numbers = {1,2,3}; // non-primitive" + RESET + "\n\n" +
+            YELLOW + "💡 Remember:" + RESET + "\n" +
+            "String is special - it's the only non-primitive\n" +
+            "that doesn't need 'new' keyword",
+            
+            // Page 10: var Keyword
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                      var KEYWORD" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🌟 Type Inference (Java 10+):" + RESET + "\n" +
+            "Compiler figures out the type automatically\n\n" +
+            YELLOW + "Basic Usage:" + RESET + "\n" +
+            BLUE + "var x = 5;           // int\n" +
+            "var myDouble = 9.98;     // double\n" +
+            "var myChar = 'D';        // char\n" +
+            "var myBoolean = true;    // boolean\n" +
+            "var myString = \"Hello\";  // String" + RESET + "\n\n" +
+            GREEN + "🎯 Complex Types (Useful!):" + RESET + "\n" +
+            BLUE + "// Without var\n" +
+            "ArrayList<String> cars = new ArrayList<String>();\n\n" +
+            "// With var - much cleaner!\n" +
+            "var cars = new ArrayList<String>();" + RESET,
+            
+            // Page 11: var Rules & Summary
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "               var RULES & DATA TYPE SUMMARY" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "📝 var Important Rules:" + RESET + "\n" +
+            RED + "❌ var x;              // Error - must assign value\n" +
+            GREEN + "✅ var x = 5;          // OK - x is int\n" +
+            GREEN + "✅ x = 10;             // OK - still int\n" +
+            RED + "❌ x = 9.99;           // Error - can't change type" + RESET + "\n\n" +
+            YELLOW + "🚀 When to Use var:" + RESET + "\n" +
+            "• Complex types (ArrayList, HashMap)\n" +
+            "• When type is obvious from context\n" +
+            "• For cleaner code\n\n" +
+            YELLOW + "🚫 When NOT to Use var:" + RESET + "\n" +
+            "• Simple types (int, double)\n" +
+            "• When type isn't clear\n" +
+            "• For learning purposes\n\n" +
+            PURPLE + "🌟 Data Type Pro Tip:" + RESET + "\n" +
+            "Start with explicit types while learning,\n" +
+            "use var for complex types later!\n\n" +
+            PURPLE + "Congratulations! You've mastered Java Data Types! 🎉" + RESET
+        };
+        
+        int currentPage = 0;
+        boolean exitLesson = false;
+        
+        while (!exitLesson && currentPage < pages.length) {
+            clearScreen();
+            System.out.println(pages[currentPage]);
+            System.out.println("\n" + "═".repeat(55));
+            
+            if (currentPage == 0) {
+                System.out.println(GREEN + "[N] Next Page" + RESET + "    " + RED + "[0] Exit Lesson" + RESET);
+            } else if (currentPage == pages.length - 1) {
+                System.out.println(GREEN + "[P] Previous Page" + RESET + "    " + CYAN + "[R] Restart" + RESET + "    " + RED + "[0] Exit Lesson" + RESET);
+            } else {
+                System.out.println(GREEN + "[P] Previous Page" + RESET + "    " + GREEN + "[N] Next Page" + RESET + "    " + CYAN + "[R] Restart" + RESET + "    " + RED + "[0] Exit Lesson" + RESET);
+            }
+            
+            System.out.print("\n" + YELLOW + "Choose navigation: " + RESET);
+            String input = scanner.nextLine().trim().toLowerCase();
+            
+            switch (input) {
+                case "n":
+                case "next":
+                    if (currentPage < pages.length - 1) {
+                        currentPage++;
+                    }
+                    break;
+                case "p":
+                case "prev":
+                case "previous":
+                    if (currentPage > 0) {
+                        currentPage--;
+                    }
+                    break;
+                case "r":
+                case "restart":
+                    currentPage = 0;
+                    break;
+                case "0":
+                case "exit":
+                    exitLesson = true;
+                    break;
+                default:
+                    System.out.println(RED + "Invalid choice! Press Enter to try again." + RESET);
+                    scanner.nextLine();
+            }
+        }
+        
+        if (!exitLesson) {
+            System.out.println("\n" + GREEN + "🎉 Lesson completed! Press Enter to return to menu." + RESET);
+            scanner.nextLine();
+        }
+    }
+    
+    private static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 }

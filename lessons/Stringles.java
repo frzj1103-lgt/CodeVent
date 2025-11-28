@@ -1,284 +1,350 @@
+package lessons;
+import java.util.Scanner;
+
 public class Stringles {
+    private static final String RESET = "\u001B[0m";
+    private static final String RED = "\u001B[31m";
+    private static final String GREEN = "\u001B[32m";
+    private static final String YELLOW = "\u001B[33m";
+    private static final String BLUE = "\u001B[34m";
+    private static final String CYAN = "\u001B[36m";
+    private static final String PURPLE = "\u001B[35m";
+    
     public static void main(String[] args) {
-
-
-
-
-         System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA STRING");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("Strings are used for storing text.");
-        System.out.println("");
-        System.out.println("A String variable contains a collection of characters surrounded by double quotes (\"\"):");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("Create a variable of type String and assign it a value:");
-        System.out.println("");
-        System.out.println("String greeting = \"Hello\";");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("String Length");
-        System.out.println("");
-        System.out.println("A String in Java is actually an object, which means it contains methods that can perform certain operations on strings.");
-        System.out.println("");
-        System.out.println("For example, you can find the length of a string with the length() method:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String txt = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";");
-        System.out.println("System.out.println(\"The length of the txt string is: \" + txt.length());");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("More String Methods");
-        System.out.println("");
-        System.out.println("There are many string methods available in Java.");
-        System.out.println("");
-        System.out.println("For example:");
-        System.out.println("");
-        System.out.println("The toUpperCase() method converts a string to upper case letters.");
-        System.out.println("The toLowerCase() method converts a string to lower case letters.");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String txt = \"Hello World\";");
-        System.out.println("System.out.println(txt.toUpperCase());   // Outputs \"HELLO WORLD\"");
-        System.out.println("System.out.println(txt.toLowerCase());   // Outputs \"hello world\"");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Finding a Character in a StringThe indexOf() method returns the index ");
-        System.out.println("(the position) of the first occurrence of a specified text in a string (including whitespace):");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String txt = \"Please locate where 'locate' occurs!\";");
-        System.out.println("System.out.println(txt.indexOf(\"locate\")); // Outputs 7");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Java counts positions from zero.");
-        System.out.println("0 is the first position in a string, 1 is the second, 2 is the third ...");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("You can use the charAt() method to access a character at a specific position in a string:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String txt = \"Hello\";");
-        System.out.println("System.out.println(txt.charAt(0));  // H");
-        System.out.println("System.out.println(txt.charAt(4));  // o");
-        System.out.println("");
-        System.out.println("Comparing Strings");
-        System.out.println("");
-        System.out.println("To compare two strings, you can use the equals() method:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String txt1 = \"Hello\";");
-        System.out.println("String txt2 = \"Hello\";");
-        System.out.println("");
-        System.out.println("String txt3 = \"Greetings\";");
-        System.out.println("String txt4 = \"Great things\";");
-        System.out.println("");
-        System.out.println("System.out.println(txt1.equals(txt2));  // true");
-        System.out.println("System.out.println(txt3.equals(txt4));  // false");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Removing Whitespace");
-        System.out.println("");
-        System.out.println("The trim() method removes whitespace from the beginning and the end of a string:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String txt = \"   Hello World   \";");
-        System.out.println("System.out.println(\"Before: [\" + txt + \"]\");");
-        System.out.println("System.out.println(\"After:  [\" + txt.trim() + \"]\");");
-        System.out.println("");
-        System.out.println("Result:");
-        System.out.println("");
-        System.out.println("Before: [   Hello World   ]");
-        System.out.println("After: [Hello World]");
-          System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA CONCATENATION");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("String Concatenation");
-        System.out.println("");
-        System.out.println("The + operator can be used between strings to combine them. This is called concatenation:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String firstName = \"John\";");
-        System.out.println("String lastName = \"Doe\";");
-        System.out.println("");
-        System.out.println("System.out.println(firstName + \" \" + lastName);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Note that we have added an empty text (\" \") to create a space between firstName and lastName on print.");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Concatenation in Sentences");
-        System.out.println("");
-        System.out.println("You can use string concatenation to build sentences with both text and variables:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String name = \"John\";");
-        System.out.println("int age = 25;");
-        System.out.println("System.out.println(\"My name is \" + name + \" and I am \" + age + \" years old.\");");
-        System.out.println("");
-        System.out.println("Result:");
-        System.out.println("");
-        System.out.println("My name is John and I am 25 years old.");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("The concat() Method");
-        System.out.println("");
-        System.out.println("You can also use the concat() method to concatenate strings:");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String firstName = \"John \";");
-        System.out.println("String lastName = \"Doe\";");
-        System.out.println("System.out.println(firstName.concat(lastName));");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("You can also join more than two strings by chaining concat() calls:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String a = \"Java \";");
-        System.out.println("String b = \"is \";");
-        System.out.println("String c = \"fun!\";");
-        System.out.println("String result = a.concat(b).concat(c);");
-        System.out.println("System.out.println(result);");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Note: While you can use concat() to join multiple strings, ");
-        System.out.println("most developers prefer the + operator because it is shorter and easier to read");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA NUMBER & STRING");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("Adding Numbers and Strings");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("WARNING!");
-        System.out.println("");
-        System.out.println("Java uses the + operator for both addition and concatenation.");
-        System.out.println("Numbers are added. Strings are concatenated.");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("If you add two numbers, the result will be a number:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("int x = 10;");
-        System.out.println("int y = 20;");
-        System.out.println("int z = x + y;  // z will be 30 (an integer/number)");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("If you add two strings, the result will be a string concatenation:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String x = \"10\";");
-        System.out.println("String y = \"20\";");
-        System.out.println("");
-        System.out.println("String z = x + y;  // z will be 1020 (a String)");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("If you add a number and a string, the result will be a string concatenation:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String x = \"10\";");
-        System.out.println("int y = 20;");
-        System.out.println("String z = x + y;  // z will be 1020 (a String)");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("============================================================================================================================");
-        System.out.println("                                                 JAVA SPECIAL CHARACTERS");
-        System.out.println("============================================================================================================================");
-        System.out.println("");
-        System.out.println("Strings - Special Characters");
-        System.out.println("");
-        System.out.println("Because strings must be written within quotes, Java will misunderstand this string, and generate an error:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("String txt = \"We are the so-called \"Vikings\" from the north.\";");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("The solution to avoid this problem, is to use the backslash escape character.");
-        System.out.println("");
-        System.out.println("The backslash (\\) escape character turns special characters into string characters:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Escape character\tResult\tDescription");
-        System.out.println("\\'\t'\tSingle quote");
-        System.out.println("");
-        System.out.println("\\\"\t\"\tDouble quote");
-        System.out.println("");
-        System.out.println("\\\\\t\\\tBackslash");
-        System.out.println("");
-        System.out.println("The sequence \\\"  inserts a double quote in a string:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String txt = \"We are the so-called \\\"Vikings\\\" from the north.\";");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("The sequence \\'  inserts a single quote in a string:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String txt = \"It\\'s alright.\";");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("The sequence \\\\  inserts a single backslash in a string:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Example");
-        System.out.println("");
-        System.out.println("String txt = \"The character \\\\ is called backslash.\";");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Other common escape sequences that are valid in Java are:");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Code\tResult");
-        System.out.println("");
-        System.out.println("\\n\tNew Line");
-        System.out.println("");
-        System.out.println("\\t\tTab");
-        System.out.println("");
-        System.out.println("\\b\tBackspace");
-        System.out.println("");
-        System.out.println("\\r\tCarriage Return");
-        System.out.println("");
-        System.out.println("\\f\tForm Feed");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
+        Scanner scanner = new Scanner(System.in);
+        displayPaginatedLesson(scanner);
+        scanner.close();
     }
     
+    private static void displayPaginatedLesson(Scanner scanner) {
+        String[] pages = {
+            // Page 1: Introduction to Strings
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                    JAVA STRINGS - INTRODUCTION" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🌟 What are Strings?" + RESET + "\n" +
+            "• Used for storing text\n" +
+            "• Collection of characters in double quotes\n" +
+            "• One of the most commonly used data types\n\n" +
+            YELLOW + "💡 Basic String Creation:" + RESET + "\n" +
+            BLUE + "String greeting = \"Hello\";" + RESET + "\n" +
+            BLUE + "String name = \"John\";" + RESET + "\n" +
+            BLUE + "String message = \"Welcome to Java!\";" + RESET + "\n\n" +
+            GREEN + "🎯 Key Points:" + RESET + "\n" +
+            "• Strings are objects in Java\n" +
+            "• They have built-in methods\n" +
+            "• Text must be in " + BLUE + "\"double quotes\"" + RESET + "\n" +
+            "• Case-sensitive",
+
+            // Page 2: String Length
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                     STRING LENGTH" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "📏 length() Method:" + RESET + "\n" +
+            "Finds how many characters are in a string\n\n" +
+            YELLOW + "💡 Example:" + RESET + "\n" +
+            BLUE + "String txt = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";" + RESET + "\n" +
+            BLUE + "System.out.println(\"Length: \" + txt.length());" + RESET + "\n\n" +
+            GREEN + "📝 Output:" + RESET + "\n" +
+            "Length: 26\n\n" +
+            YELLOW + "🔍 More Examples:" + RESET + "\n" +
+            BLUE + "\"Hello\".length()    // 5" + RESET + "\n" +
+            BLUE + "\"Java\".length()     // 4" + RESET + "\n" +
+            BLUE + "\" \".length()        // 1 (space counts!)" + RESET + "\n" +
+            BLUE + "\"\".length()         // 0 (empty string)" + RESET + "\n\n" +
+            YELLOW + "💡 Remember:" + RESET + "\n" +
+            "Spaces and punctuation count as characters",
+
+            // Page 3: Case Conversion Methods
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                 CASE CONVERSION METHODS" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🎯 Changing Letter Case:" + RESET + "\n" +
+            BLUE + "toUpperCase()" + RESET + " - Converts to ALL CAPS\n" +
+            BLUE + "toLowerCase()" + RESET + " - Converts to all lowercase\n\n" +
+            YELLOW + "💡 Examples:" + RESET + "\n" +
+            BLUE + "String txt = \"Hello World\";" + RESET + "\n" +
+            BLUE + "System.out.println(txt.toUpperCase());" + RESET + "\n" +
+            GREEN + "Output: HELLO WORLD" + RESET + "\n\n" +
+            BLUE + "System.out.println(txt.toLowerCase());" + RESET + "\n" +
+            GREEN + "Output: hello world" + RESET + "\n\n" +
+            YELLOW + "🔧 Real Usage:" + RESET + "\n" +
+            "• User input normalization\n" +
+            "• Case-insensitive comparisons\n" +
+            "• Data formatting\n\n" +
+            BLUE + "String userInput = \"AdMiN\";" + RESET + "\n" +
+            BLUE + "if (userInput.toLowerCase().equals(\"admin\")) {" + RESET + "\n" +
+            BLUE + "    System.out.println(\"Access granted\");" + RESET + "\n" +
+            BLUE + "}" + RESET,
+
+            // Page 4: Finding Characters
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                 FINDING CHARACTERS IN STRINGS" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🔍 indexOf() Method:" + RESET + "\n" +
+            "• Finds position of first occurrence\n" +
+            "• Returns -1 if not found\n" +
+            "• Java counts from " + RED + "0" + RESET + " (not 1!)\n\n" +
+            YELLOW + "💡 Example:" + RESET + "\n" +
+            BLUE + "String txt = \"Please locate where 'locate' occurs!\";" + RESET + "\n" +
+            BLUE + "System.out.println(txt.indexOf(\"locate\"));" + RESET + "\n" +
+            GREEN + "Output: 7" + RESET + "\n\n" +
+            GREEN + "👆 charAt() Method:" + RESET + "\n" +
+            "Gets character at specific position\n\n" +
+            YELLOW + "💡 Example:" + RESET + "\n" +
+            BLUE + "String txt = \"Hello\";" + RESET + "\n" +
+            BLUE + "System.out.println(txt.charAt(0));  // H" + RESET + "\n" +
+            BLUE + "System.out.println(txt.charAt(4));  // o" + RESET + "\n\n" +
+            YELLOW + "📊 Position Reference:" + RESET + "\n" +
+            "H e l l o\n" +
+            "0 1 2 3 4",
+
+            // Page 5: Comparing Strings
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                  COMPARING STRINGS" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "✅ equals() Method:" + RESET + "\n" +
+            "• Compares string content\n" +
+            "• Returns " + GREEN + "true" + RESET + " or " + RED + "false" + RESET + "\n" +
+            "• Case-sensitive comparison\n\n" +
+            YELLOW + "💡 Examples:" + RESET + "\n" +
+            BLUE + "String txt1 = \"Hello\";" + RESET + "\n" +
+            BLUE + "String txt2 = \"Hello\";" + RESET + "\n" +
+            BLUE + "String txt3 = \"Greetings\";" + RESET + "\n\n" +
+            BLUE + "System.out.println(txt1.equals(txt2));  // true" + RESET + "\n" +
+            BLUE + "System.out.println(txt1.equals(txt3));  // false" + RESET + "\n\n" +
+            GREEN + "🚫 Common Mistake:" + RESET + "\n" +
+            RED + "if (txt1 == txt2) " + RESET + "// Don't use == for strings!\n" +
+            GREEN + "✅ Correct:" + RESET + "\n" +
+            BLUE + "if (txt1.equals(txt2))" + RESET + "\n\n" +
+            YELLOW + "🔧 equalsIgnoreCase():" + RESET + "\n" +
+            BLUE + "\"Hello\".equalsIgnoreCase(\"HELLO\")  // true" + RESET,
+
+            // Page 6: Removing Whitespace
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                 REMOVING WHITESPACE" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🧹 trim() Method:" + RESET + "\n" +
+            "• Removes spaces from start and end\n" +
+            "• Does NOT affect spaces in middle\n" +
+            "• Useful for cleaning user input\n\n" +
+            YELLOW + "💡 Example:" + RESET + "\n" +
+            BLUE + "String txt = \"   Hello World   \";" + RESET + "\n" +
+            BLUE + "System.out.println(\"Before: [\" + txt + \"]\");" + RESET + "\n" +
+            BLUE + "System.out.println(\"After:  [\" + txt.trim() + \"]\");" + RESET + "\n\n" +
+            GREEN + "📝 Output:" + RESET + "\n" +
+            "Before: [   Hello World   ]\n" +
+            "After:  [Hello World]\n\n" +
+            YELLOW + "🔍 Visual Example:" + RESET + "\n" +
+            RED + "␣␣␣Hello␣World␣␣␣" + RESET + " → " + GREEN + "Hello␣World" + RESET + "\n\n" +
+            YELLOW + "💡 Real Usage:" + RESET + "\n" +
+            "• Cleaning form inputs\n" +
+            "• Preparing data for processing\n" +
+            "• User authentication",
+
+            // Page 7: String Concatenation
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                  STRING CONCATENATION" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🔗 Using + Operator:" + RESET + "\n" +
+            "Combines strings together\n\n" +
+            YELLOW + "💡 Examples:" + RESET + "\n" +
+            BLUE + "String firstName = \"John\";" + RESET + "\n" +
+            BLUE + "String lastName = \"Doe\";" + RESET + "\n" +
+            BLUE + "System.out.println(firstName + \" \" + lastName);" + RESET + "\n" +
+            GREEN + "Output: John Doe" + RESET + "\n\n" +
+            GREEN + "🔤 Building Sentences:" + RESET + "\n" +
+            BLUE + "String name = \"John\";" + RESET + "\n" +
+            BLUE + "int age = 25;" + RESET + "\n" +
+            BLUE + "System.out.println(\"My name is \" + name + \" and I am \" + age + \" years old.\");" + RESET + "\n" +
+            GREEN + "Output: My name is John and I am 25 years old." + RESET + "\n\n" +
+            YELLOW + "💡 Tip:" + RESET + "\n" +
+            "Add spaces between variables for readable output",
+
+            // Page 8: concat() Method
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                   CONCAT() METHOD" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🎯 concat() Alternative:" + RESET + "\n" +
+            "Another way to join strings\n\n" +
+            YELLOW + "💡 Basic Usage:" + RESET + "\n" +
+            BLUE + "String firstName = \"John \";" + RESET + "\n" +
+            BLUE + "String lastName = \"Doe\";" + RESET + "\n" +
+            BLUE + "System.out.println(firstName.concat(lastName));" + RESET + "\n" +
+            GREEN + "Output: John Doe" + RESET + "\n\n" +
+            GREEN + "⛓️ Chaining concat():" + RESET + "\n" +
+            BLUE + "String a = \"Java \";" + RESET + "\n" +
+            BLUE + "String b = \"is \";" + RESET + "\n" +
+            BLUE + "String c = \"fun!\";" + RESET + "\n" +
+            BLUE + "String result = a.concat(b).concat(c);" + RESET + "\n" +
+            BLUE + "System.out.println(result);" + RESET + "\n" +
+            GREEN + "Output: Java is fun!" + RESET + "\n\n" +
+            YELLOW + "💡 Recommendation:" + RESET + "\n" +
+            "Most developers prefer " + BLUE + "+" + RESET + " operator:\n" +
+            "• Shorter to write\n" +
+            "• Easier to read\n" +
+            "• More flexible",
+
+            // Page 9: Numbers vs Strings
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "               NUMBERS VS STRINGS - WARNING!" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            RED + "⚠️ IMPORTANT: + Operator Does Both!" + RESET + "\n" +
+            "• Numbers: " + GREEN + "Addition" + RESET + "\n" +
+            "• Strings: " + GREEN + "Concatenation" + RESET + "\n\n" +
+            YELLOW + "🔢 Number Addition:" + RESET + "\n" +
+            BLUE + "int x = 10;" + RESET + "\n" +
+            BLUE + "int y = 20;" + RESET + "\n" +
+            BLUE + "int z = x + y;  // z = 30" + RESET + "\n\n" +
+            YELLOW + "🔤 String Concatenation:" + RESET + "\n" +
+            BLUE + "String x = \"10\";" + RESET + "\n" +
+            BLUE + "String y = \"20\";" + RESET + "\n" +
+            BLUE + "String z = x + y;  // z = \"1020\"" + RESET + "\n\n" +
+            YELLOW + "🔀 Mixed Types:" + RESET + "\n" +
+            BLUE + "String x = \"10\";" + RESET + "\n" +
+            BLUE + "int y = 20;" + RESET + "\n" +
+            BLUE + "String z = x + y;  // z = \"1020\"" + RESET + "\n\n" +
+            RED + "💡 Rule: Number + String = String" + RESET,
+
+            // Page 10: Escape Characters
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                  ESCAPE CHARACTERS" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🎯 The Problem:" + RESET + "\n" +
+            RED + "String txt = \"We are the so-called \"Vikings\" from the north.\";" + RESET + "\n" +
+            RED + "// ERROR! Java gets confused by quotes inside quotes" + RESET + "\n\n" +
+            GREEN + "✅ The Solution:" + RESET + "\n" +
+            "Use backslash " + BLUE + "\\" + RESET + " to escape special characters\n\n" +
+            YELLOW + "🔤 Common Escape Sequences:" + RESET + "\n" +
+            BLUE + "\\\"" + RESET + " - Double quote\n" +
+            BLUE + "\\'" + RESET + " - Single quote\n" +
+            BLUE + "\\\\" + RESET + " - Backslash\n" +
+            BLUE + "\\n" + RESET + " - New line\n" +
+            BLUE + "\\t" + RESET + " - Tab",
+
+            // Page 11: Escape Character Examples
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "               ESCAPE CHARACTER EXAMPLES" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🔤 Double Quotes:" + RESET + "\n" +
+            BLUE + "String txt = \"We are the so-called \\\"Vikings\\\" from the north.\";" + RESET + "\n" +
+            GREEN + "Output: We are the so-called \"Vikings\" from the north." + RESET + "\n\n" +
+            GREEN + "🔤 Single Quote:" + RESET + "\n" +
+            BLUE + "String txt = \"It\\'s alright.\";" + RESET + "\n" +
+            GREEN + "Output: It's alright." + RESET + "\n\n" +
+            GREEN + "🔤 Backslash:" + RESET + "\n" +
+            BLUE + "String txt = \"The character \\\\ is called backslash.\";" + RESET + "\n" +
+            GREEN + "Output: The character \\ is called backslash." + RESET + "\n\n" +
+            GREEN + "🔤 New Line:" + RESET + "\n" +
+            BLUE + "String txt = \"Hello\\nWorld\";" + RESET + "\n" +
+            GREEN + "Output:" + RESET + "\n" +
+            "Hello\n" +
+            "World\n\n" +
+            GREEN + "🔤 Tab:" + RESET + "\n" +
+            BLUE + "String txt = \"Name:\\tJohn\";" + RESET + "\n" +
+            GREEN + "Output: Name:    John" + RESET,
+
+            // Page 12: Summary & Practice
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                   SUMMARY & PRACTICE" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🎓 Key String Methods:" + RESET + "\n" +
+            "✓ length() - Get string length\n" +
+            "✓ toUpperCase()/toLowerCase() - Change case\n" +
+            "✓ indexOf() - Find character position\n" +
+            "✓ charAt() - Get character at position\n" +
+            "✓ equals() - Compare strings\n" +
+            "✓ trim() - Remove spaces\n" +
+            "✓ concat() - Join strings\n\n" +
+            YELLOW + "💡 Important Rules:" + RESET + "\n" +
+            "• Use " + BLUE + "\"double quotes\"" + RESET + " for strings\n" +
+            "• Positions start at " + RED + "0" + RESET + "\n" +
+            "• Use " + BLUE + "equals()" + RESET + " not " + RED + "==" + RESET + " for comparison\n" +
+            "• " + BLUE + "+" + RESET + " does addition OR concatenation\n\n" +
+            GREEN + "🧠 Practice Exercises:" + RESET + "\n" +
+            "1. Create a full name from first/last names\n" +
+            "2. Convert user input to uppercase\n" +
+            "3. Find if \"Java\" exists in a sentence\n" +
+            "4. Clean user input with trim()\n" +
+            "5. Create a formatted address using \\n",
+
+            // Page 13: Final Summary
+            "═══════════════════════════════════════════════════════════════\n" +
+            CYAN + "                     FINAL SUMMARY" + RESET + "\n" +
+            "═══════════════════════════════════════════════════════════════\n\n" +
+            GREEN + "🌟 You've Learned:" + RESET + "\n" +
+            "• How to create and manipulate strings\n" +
+            "• Essential string methods for everyday use\n" +
+            "• How to compare and combine strings\n" +
+            "• The difference between numbers and strings with +\n" +
+            "• How to use escape characters for special symbols\n\n" +
+            YELLOW + "🚀 Real Applications:" + RESET + "\n" +
+            "• User input processing\n" +
+            "• Data validation and cleaning\n" +
+            "• Text formatting and display\n" +
+            "• File and data processing\n" +
+            "• Web application development\n\n" +
+            PURPLE + "💡 Remember:" + RESET + "\n" +
+            "Strings are everywhere in programming!\n" +
+            "Mastering them is essential for any Java developer.\n\n" +
+            PURPLE + "Congratulations! You've mastered Java Strings! 🎉" + RESET
+        };
+        
+        int currentPage = 0;
+        boolean exitLesson = false;
+        
+        while (!exitLesson && currentPage < pages.length) {
+            clearScreen();
+            System.out.println(pages[currentPage]);
+            System.out.println("\n" + "═".repeat(55));
+            
+            if (currentPage == 0) {
+                System.out.println(GREEN + "[N] Next Page" + RESET + "    " + RED + "[0] Exit Lesson" + RESET);
+            } else if (currentPage == pages.length - 1) {
+                System.out.println(GREEN + "[P] Previous Page" + RESET + "    " + CYAN + "[R] Restart" + RESET + "    " + RED + "[0] Exit Lesson" + RESET);
+            } else {
+                System.out.println(GREEN + "[P] Previous Page" + RESET + "    " + GREEN + "[N] Next Page" + RESET + "    " + CYAN + "[R] Restart" + RESET + "    " + RED + "[0] Exit Lesson" + RESET);
+            }
+            
+            System.out.print("\n" + YELLOW + "Choose navigation: " + RESET);
+            String input = scanner.nextLine().trim().toLowerCase();
+            
+            switch (input) {
+                case "n":
+                case "next":
+                    if (currentPage < pages.length - 1) {
+                        currentPage++;
+                    }
+                    break;
+                case "p":
+                case "prev":
+                case "previous":
+                    if (currentPage > 0) {
+                        currentPage--;
+                    }
+                    break;
+                case "r":
+                case "restart":
+                    currentPage = 0;
+                    break;
+                case "0":
+                case "exit":
+                    exitLesson = true;
+                    break;
+                default:
+                    System.out.println(RED + "Invalid choice! Press Enter to try again." + RESET);
+                    scanner.nextLine();
+            }
+        }
+        
+        if (!exitLesson) {
+            System.out.println("\n" + GREEN + "🎉 Lesson completed! Press Enter to return to menu." + RESET);
+            scanner.nextLine();
+        }
+    }
+    
+    private static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 }
